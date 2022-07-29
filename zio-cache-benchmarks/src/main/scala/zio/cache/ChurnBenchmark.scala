@@ -20,7 +20,7 @@ class ChurnBenchmark extends zio.Runtime[Any] {
   var size: Int = _
 
   var newEntries: Array[String]             = _
-  var cache: Cache[String, Nothing, String] = _
+  var cache: Cache[String, Any, Nothing, String] = _
 
   val identityLookup: Lookup[String, Any, Nothing, String] = Lookup[String, Any, Nothing, String](ZIO.succeed(_))
 
